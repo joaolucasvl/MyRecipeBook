@@ -12,7 +12,7 @@ namespace MyRecipeBookAPI.Controllers
         // Criar EndPoint para registrar um novo usuário
 
         [HttpPost]
-        [ProducesResponseType(typeof(ResponseRegisteredUserJson),StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ResponseRegisteredUserJson),StatusCodes.Status201Created)] // Retornar código 201, e o body do tipo ResponseRegisteredUserJson
         public IActionResult Register(RequestRegisterUserJson request)
         {
             return Created(); // Retornar código 201 - Created e Receber os dados do usuário
